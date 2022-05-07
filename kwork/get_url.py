@@ -1,7 +1,7 @@
 import openpyxl
 from openpyxl.worksheet import worksheet
 
-from GF import connector
+from GF.kwork import connector
 from bs4 import BeautifulSoup as BS
 import re
 

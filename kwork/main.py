@@ -4,7 +4,6 @@ from openpyxl.worksheet import worksheet
 import connector
 import excel_writing
 import kwork_parsing
-import get_url
 from bs4 import BeautifulSoup as BS
 
 URLS_PATH = 'urls.xlsx'
