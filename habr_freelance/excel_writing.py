@@ -35,6 +35,7 @@ def dump_to_xlsx():
     sheet.cell(row=1, column=5, value='Дата публикации')
     sheet.cell(row=1, column=6, value='Количество откликов')
     sheet.cell(row=1, column=7, value='Количество предложений')
+    sheet.cell(row=1, column=8, value='Описание')
     book.save(filename=OUT_XLSX_FILENAME)
 
 def data_to_xlsx(soup, num):
@@ -47,4 +48,5 @@ def data_to_xlsx(soup, num):
     sheet.cell(row=num, column=5, value=habr_scraper.scrap_meta(soup)[0])
     sheet.cell(row=num, column=6, value=habr_scraper.scrap_meta(soup)[1])
     sheet.cell(row=num, column=7, value=habr_scraper.scrap_meta(soup)[2])
+    sheet.cell(row=num, column=8, value=habr_scraper.scrap_description(soup))
     book.save(filename=OUT_XLSX_FILENAME)
